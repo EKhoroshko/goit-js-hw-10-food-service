@@ -12,7 +12,7 @@ $input.addEventListener('change', (e) => {
         localStorage.removeItem('theme');
     }
     else {
-        localStorage.setItem('theme', 'dark-theme')
+        localStorage.setItem('theme', 'dark-theme');
     }
     addDarkMode();
 });

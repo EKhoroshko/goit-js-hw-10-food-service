@@ -9,7 +9,7 @@ const $input = document.querySelector('.theme-switch__toggle');
 $input.addEventListener('change', (e) => {
     e.preventDefault();
     if (localStorage.getItem('theme') === 'dark-theme') {
-        localStorage.removeItem('theme');
+        localStorage.setItem('theme', 'light-theme');
     }
     else {
         localStorage.setItem('theme', 'dark-theme');
@@ -20,6 +20,7 @@ $input.addEventListener('change', (e) => {
 function addDarkMode() {
     if (localStorage.getItem('theme') === 'dark-theme') {
         document.querySelector('body').classList.add('dark-theme');
+        $input.setAttribute('checked', true);
     }
     else {
         document.querySelector('body').classList.remove('dark-theme');
